@@ -22,16 +22,16 @@ final GoRouter appRouter = GoRouter(
     // Écrans hors barre de navigation
     GoRoute(
         path: AppRoutes.splash,
-        builder: (_, __) => const PlaceholderScreen('Démarrage')),
+        builder: (_, _) => const PlaceholderScreen('Démarrage')),
     GoRoute(
         path: AppRoutes.login,
-        builder: (_, __) => const PlaceholderScreen('Connexion')),
+        builder: (_, _) => const PlaceholderScreen('Connexion')),
     GoRoute(
         path: AppRoutes.register,
-        builder: (_, __) => const PlaceholderScreen('Inscription')),
+        builder: (_, _) => const PlaceholderScreen('Inscription')),
     GoRoute(
         path: AppRoutes.results,
-        builder: (_, __) => const PlaceholderScreen('Résultats')),
+        builder: (_, _) => const PlaceholderScreen('Résultats')),
     GoRoute(
       path: AppRoutes.rideDetail,
       builder: (_, state) =>
@@ -44,31 +44,31 @@ final GoRouter appRouter = GoRouter(
     ),
     GoRoute(
         path: AppRoutes.report,
-        builder: (_, __) => const PlaceholderScreen('Signalement')),
+        builder: (_, _) => const PlaceholderScreen('Signalement')),
 
     // Écrans avec barre de navigation (4 onglets)
     StatefulShellRoute.indexedStack(
-      builder: (_, __, shell) => ScaffoldWithNav(navigationShell: shell),
+      builder: (_, _, shell) => ScaffoldWithNav(navigationShell: shell),
       branches: [
         StatefulShellBranch(routes: [
           GoRoute(
               path: AppRoutes.search,
-              builder: (_, __) => const PlaceholderScreen('Explorer')),
+              builder: (_, _) => const PlaceholderScreen('Explorer')),
         ]),
         StatefulShellBranch(routes: [
           GoRoute(
               path: AppRoutes.publish,
-              builder: (_, __) => const PlaceholderScreen('Publier')),
+              builder: (_, _) => const PlaceholderScreen('Publier')),
         ]),
         StatefulShellBranch(routes: [
           GoRoute(
               path: AppRoutes.activity,
-              builder: (_, __) => const PlaceholderScreen('Activité')),
+              builder: (_, _) => const PlaceholderScreen('Activité')),
         ]),
         StatefulShellBranch(routes: [
           GoRoute(
               path: AppRoutes.profile,
-              builder: (_, __) => const PlaceholderScreen('Profil')),
+              builder: (_, _) => const PlaceholderScreen('Profil')),
         ]),
       ],
     ),
