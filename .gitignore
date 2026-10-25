@@ -49,3 +49,6 @@ app.*.map.json
 
 # Backups
 *.bak
+
+# Editor settings
+.vscode/
