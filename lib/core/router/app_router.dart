@@ -3,6 +3,8 @@ import 'package:tawsila/core/widgets/placeholder_screen.dart';
 import 'scaffold_with_nav.dart';
 import 'package:tawsila/features/auth/login_screen.dart';
 import 'package:tawsila/features/auth/register_screen.dart';
+import 'package:tawsila/features/auth/splash_screen.dart';
+import 'package:tawsila/features/profile/profile_screen.dart';
 class AppRoutes {
   static const splash = '/splash';
   static const login = '/login';
@@ -23,7 +25,7 @@ final GoRouter appRouter = GoRouter(
     // Écrans hors barre de navigation
     GoRoute(
         path: AppRoutes.splash,
-        builder: (_, _) => const PlaceholderScreen('Démarrage')),
+        builder: (_, _) => const SplashScreen()),
     GoRoute(
         path: AppRoutes.login,
         builder: (_, _) => const LoginScreen()),
@@ -69,7 +71,7 @@ final GoRouter appRouter = GoRouter(
         StatefulShellBranch(routes: [
           GoRoute(
               path: AppRoutes.profile,
-              builder: (_, _) => const PlaceholderScreen('Profil')),
+              builder: (_, _) => const ProfileScreen()),
         ]),
       ],
     ),
