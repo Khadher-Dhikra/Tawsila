@@ -73,6 +73,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
       if (!mounted) return;
       context.go(AppRoutes.search);
     } on FirebaseAuthException catch (e) {
+      debugPrint('AUTH ERROR: ${e.code} / ${e.message} / email="${_emailCtrl.text}"');
       if (!mounted) return;
       setState(() => _error = _messageFor(e));
     } catch (_) {
