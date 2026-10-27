@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:tawsila/core/widgets/placeholder_screen.dart';
 import 'scaffold_with_nav.dart';
+import 'package:tawsila/features/auth/login_screen.dart';
 
 class AppRoutes {
   static const splash = '/splash';
@@ -23,9 +24,9 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
         path: AppRoutes.splash,
         builder: (_, _) => const PlaceholderScreen('Démarrage')),
-    GoRoute(
+        GoRoute(
         path: AppRoutes.login,
-        builder: (_, _) => const PlaceholderScreen('Connexion')),
+        builder: (_, _) => const LoginScreen()),
     GoRoute(
         path: AppRoutes.register,
         builder: (_, _) => const PlaceholderScreen('Inscription')),
